@@ -35,8 +35,23 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public void deleteDepartment(String id) {
+    public void deleteDepartmentById(String id) {
         departmentDao.deleteById(id);
+    }
+
+    @Override
+    public void updateDepartment(Department department) {
+        departmentDao.save(department);
+    }
+
+    @Override
+    public void deleteAllDepartments() {
+        departmentDao.deleteAll();
+    }
+
+    @Override
+    public Department getDepartmentByEmployeeName(String employeeName) {
+        return departmentDao.getDepartmentByEmployeeName(employeeName);
     }
 
 

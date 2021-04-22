@@ -12,5 +12,11 @@ public interface DepartmentService {
 
     public Optional<Department> findDepartment(String id);
 
-    public void deleteDepartment(String id);
+    public void deleteDepartmentById(String id);
+
+    public void updateDepartment(Department department);
+
+    public void deleteAllDepartments();
+
+    public Department getDepartmentByEmployeeName(String employeeName);
 }
